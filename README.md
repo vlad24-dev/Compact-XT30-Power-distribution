@@ -51,9 +51,8 @@ _Not yet built._
 | `04-layout/` | Stackup, trace-width calc results, DRC reports, 3D renders |
 | `05-bom/` | Bill of materials |
 | `06-assembly/` | Assembly photos and notes |
-| `07-bringup/` | Power-on checklist and measured results |
-| `08-test/` | Load-test plan and measurements vs. success criteria |
-| `09-postmortem.md` | What failed, root causes, Rev B change list |
+| `07-test/` | Load-test plan and measurements vs. success criteria |
+| `08-postmortem.md` | What failed, root causes, Rev B change list |
 
 ## License
 
