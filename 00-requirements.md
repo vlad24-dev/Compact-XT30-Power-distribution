@@ -42,7 +42,7 @@ where the REV block occupies too much space.
 Sizing is done to worst-case, not typical, current as a trace sized for average
 draw melts the one time a motor stalls. 12.5 A clears a stalled standard FTC
 motor (~10 A) with margin. The three branches sum to 37.5 A theoretical, but the
-20 A battery fuse (ER-3) means the board never actually carries that total — the
+20 A battery fuse (ER-3) means the board never actually carries that total as the
 fuse blows first. So I had to design branches for 12.5 A each, input trunk designed
 for 20 A.**
 
