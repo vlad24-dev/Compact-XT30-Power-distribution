@@ -1,22 +1,7 @@
-# Board 02 — Compact XT30 Power Distribution Board
 
-A 12 V power distribution board for an FTC robot: one XT30 battery input fanned
-out to three XT30 branches, in half the footprint of the REV block it replaces.
-
-| | |
-|---|---|
-| **Started** | 12/8/2026 |
-| **Designer** | Vasii Vlad Andrei |
-| **EDA tool** | KiCad 10 |
-| **Layers** | 2 |
-| **Per-branch rating** | 12.5 A continuous |
-| **Input ceiling** | 20 A (battery fuse-limited) |
-| **Fabricator** | TBD |
-
-## Why this board exists
 
 The REV XT30 distribution block works, but it's bigger than a good, tight robot build
-can spare. This is a smaller replacement: same job, half the footprint.
+can spare.
 
 The interesting part of this board isn't the circuit as it's a passive fan-out, there's
 barely a "circuit" at all. It's the copper. At 12.5 A per branch and up to 20 A
@@ -25,20 +10,6 @@ on a robot mid-match is disastrous. So every power path on this board
 is sized from an IPC-2221 calculation with a stated temperature-rise budget, and
 that calculation is shown in the deisgn log.
 
-## Result
-
-<!-- Fill in after bring-up: photo, measured branch currents, measured temp rise,
-     measured voltage drop. -->
-
-_Not yet built._
-
-## Key learnings
-
-<!-- Fill in after the postmortem. Specific and technical. The trace-width
-     decision, the copper-weight tradeoff, anything that surprised you at
-     bring-up under load. -->
-
-_Not yet built._
 
 ## Repository map
 
@@ -53,7 +24,3 @@ _Not yet built._
 | `06-assembly/` | Assembly photos and notes |
 | `07-test/` | Load-test plan and measurements vs. success criteria |
 | `08-postmortem.md` | What failed, root causes, Rev B change list |
-
-## License
-
-Hardware: CERN-OHL-S-2.0. Documentation: CC-BY-4.0.
