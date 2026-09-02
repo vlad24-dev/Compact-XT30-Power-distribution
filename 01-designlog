@@ -1,4 +1,5 @@
-I started this project with making the decision of using 2oz copper instead of the 1oz i had previously used in my projects. I have came to this conclusion as tests and calculations that will be featured in this design log have determined that 1oz copper will make the pcb really overheat, and if it overheats in the middle of the match, I cannot simply roisk losing the entire power distribution of the robot just because i didnt want to improve my design with 2oz copper.
+I started this project with making the decision of using 2oz copper instead of the 1oz i had previously used in my projects. 
+I have came to this conclusion as tests and calculations that will be featured in this design log have determined that 1oz copper will make the pcb really overheat, and if it overheats in the middle of the match, I cannot simply roisk losing the entire power distribution of the robot just because i didnt want to improve my design with 2oz copper.
 
 IPC-2221 external-layer formula.
 
@@ -43,3 +44,4 @@ Copper thickness by weight:
 As the tables show, I have to use 2oz copper.
 
 UPDATE: 29.5 mm × 24 mm, as close to half a REV block (27×23 mm target) as four XT30 footprints plus high-current pour clearance allow
+UPDATE2: After deciding on the larger dimension of the board, I noticed i have space for even a 4th XT30 output connector.
