@@ -31,7 +31,7 @@ where the REV block occupies too much space.
 | ER-1 | Input connector | 1 × XT30 (board-mount), mates with battery XT30 |
 | ER-2 | Input voltage | 12 V nominal (10–13 V operating range) |
 | ER-3 | Input current ceiling | 20 A |
-| ER-4 | Output connectors | 3 × XT30 (board-mount) |
+| ER-4 | Output connectors | 4 × XT30 (board-mount) |
 | ER-5 | Per-branch rated current | **12.5 A continuous** |
 | ER-6 | Copper temperature rise | ≤ 30 °C rise at rated current, worst-case branch |
 | ER-7 | Voltage drop | ≤ 100 mV input-to-any-output at 12.5 A |
@@ -52,7 +52,7 @@ for 20 A.**
 |---|---|---|
 | 1 | Board footprint | Exactly half the area of one REV XT30 distribution block (27mm x 23.1mm x 11.7mm, 639.9mm^2) |
 | 2 | Layer count | 2 |
-| 3 | Copper weight | TBD — pending trace-width calculation (§ open questions). Likely 2 oz. |
+| 3 | Copper weight | 2 oz. |
 | 4 | Connector orientation | All XT30 accessible without obstruction when board is mounted |
 
 ## 5. Success criteria
@@ -65,9 +65,4 @@ for 20 A.**
 | SC-4 | Board fits target footprint (½ REV block) | Physical measurement / caliper |
 | SC-5 | No XT30 connector overheats at rated current | IR thermometer at connector solder joints |
 
-## 6. Out of scope
 
-- **Fusing per branch** — the battery's single 20 A fuse is the system protection;
-  per-branch fusing is a possible Rev B feature, not Rev A.
-- **Current/voltage sensing or telemetry** — this is a passive distribution board.
-- **Switching / regulation** — pure passthrough, 12 V in = 12 V out.
