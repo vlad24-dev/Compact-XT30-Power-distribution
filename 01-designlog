@@ -1,2 +1,45 @@
 I started this project with making the decision of using 2oz copper instead of the 1oz i had previously used in my projects. I have came to this conclusion as tests and calculations that will be featured in this design log have determined that 1oz copper will make the pcb really overheat, and if it overheats in the middle of the match, I cannot simply roisk losing the entire power distribution of the robot just because i didnt want to improve my design with 2oz copper.
 
+IPC-2221 external-layer formula.
+
+    I = k · ΔT^0.44 · A^0.725
+
+    I  = current (A)
+    ΔT = allowable temperature rise above ambient (°C)
+    A  = copper cross-sectional area (mils²)
+    k  = 0.048 (external layers) | 0.024 (internal layers)
+
+All power paths are on external layers → k = 0.048.
+
+Solved for width:
+
+    A (mils²)   = ( I / (k · ΔT^0.44) )^(1/0.725)
+    width (mils) = A / thickness
+    width (mm)   = width (mils) · 0.0254
+
+Copper thickness by weight:
+    1 oz = 1.37 mils
+    2 oz = 2.74 mils
+
+**Worked corner 1 — 12.5 A, ΔT = 30 °C, 1 oz:**
+
+    30^0.44 = 4.468
+    A = (12.5 / (0.048 · 4.468))^(1/0.725) = (58.28)^1.379 = 272 mils²
+    width = 272 / 1.37 = 199 mils = 5.05 mm
+
+**Worked corner 2 — 20 A, ΔT = 10 °C, 1 oz:**
+
+    10^0.44 = 2.754
+    A = (20 / (0.048 · 2.754))^(1/0.725) = (151.3)^1.379 = 1012 mils²
+    width = 1012 / 1.37 = 739 mils = 18.8 mm
+
+**Required copper width (mm):**
+
+| Current       | ΔT = 10 °C (1 oz) | ΔT = 30 °C (1 oz) | ΔT = 10 °C (2 oz) | ΔT = 30 °C (2 oz) |
+|---------------|-------------------|-------------------|-------------------|-------------------|
+| 12.5 A branch | 10.5              | 5.05              | 5.25              | 2.5               |
+| 20 A input    | 18.8              | 9.4               | 9.8               | 4.7               |
+
+As the tables show, I have to use 2oz copper.
+
+UPDATE: 29.5 mm × 24 mm, as close to half a REV block (27×23 mm target) as four XT30 footprints plus high-current pour clearance allow
